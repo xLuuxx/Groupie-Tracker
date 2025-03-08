@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/artist.css">
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Artist Page</title>
+</head>
+<body>
+<div class ="header">
+    <a href="/homepage" class="home-button">Home</a>
+</div>
+<div class="mainContainer">
+    <div class="imageContainer">
+        <div class="imageLeft">
+            <div class="titleContainer">
+                {{.Name}}
+            </div>
+            <img id="artistImage" src="{{.Image}}" alt="Artist Image">
+        </div>
+        <div class="spotifyDiv">
+            <iframe
+                    style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/{{.SpotifyID}}?utm_source=generator"
+                    width="100%"
+                    height="230%"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            ></iframe>
+        </div>
+        </script>
+    </div>
+    <div class="infoContainer">
+        <div class="detailsSection">
+            <h2>Members</h2>
+            <div class="membersSection" >
+                <ul>
+                    {{range .Members}}
+                        <li>{{.}}</li>
+                    {{end}}
+                </ul>
+            </div>
+            <h2>Details</h2>
+            <p><strong>Creation Date:</strong> {{.CreationDate}}</p>
+            <p><strong>First Album:</strong> {{.FirstAlbum}}</p>
+        </div>
+        <div class="locationsSection">
+            <h2>Locations</h2>
+            <select name="locations" id="locations">
+                {{range .Locations}}
+                    <option value={{.}}>{{.}}</option>
+                {{end}}
+            </select>
+            <div class="map" id='map'></div>
+            <script>
+                const geojson = JSON.parse({{.GeoJson}});
+            </script>
+            <script src="/static/js/artist.js"></script>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/static/css/homepage.css">
+    <script src="/static/js/homepage.js"></script>
+
+</head>
+
+<body class ="body">
+<header>
+        <a href="/homepage" class="home-button">Home</a>
+        <h1 class ="maintitle">Welcome to your Groupie Tracker !</h1>
+</header>
+<div>
+    <br>
+
+    <div class ="searching-container">
+    <form class="searching" action="/search" method="GET">
+        <label>
+            <input type="text" name="name" placeholder="Search for an artist..." class="searchinginput" list="artists">
+        </label>
+
+        <datalist id="artists">
+            {{range $artist := .ArtistsData}}
+            <option value="{{$artist.Name}}">
+                {{range $artist.Members}}
+                <option value="{{$artist.Name}}"> {{.}} </option>
+                {{end}}
+                <option value="{{$artist.Name}}"> Created in {{$artist.CreationDate}}</option>
+                <option value="{{$artist.Name}}"> First Album published the {{$artist.FirstAlbum}}</option>
+
+            {{end}}
+        </datalist>
+
+        <div class="filter">
+            <br>
+            <label for="Group-creation">Group creation date:</label>
+            <input type="range" id="Group-creation" name="Group-creation" min="1958" max="2015" oninput="this.nextElementSibling.value = this.value">
+            <output>1985</output>
+            <br>
+            <br>
+
+            <div class="checkbox">
+            <label for="Group-member">Group Members:</label>
+                <label>1</label>
+            <input class="checkbox" type="checkbox" name="Group-member-1" id="Group-member-1" value="1">
+                <label>2</label>
+                <input class="checkbox" type="checkbox" name="Group-member-2" id="Group-member-2" value="2">
+                <label>3</label>
+                <input class="checkbox" type="checkbox" name="Group-member-3" id="Group-member-3" value="3">
+                <label>4</label>
+                <input class="checkbox" type="checkbox" name="Group-member-4" id="Group-member-4" value="4">
+                <label>5</label>
+                <input class="checkbox" type="checkbox" name="Group-member-5" id="Group-member-5" value="5">
+                <label>6</label>
+                <input class="checkbox" type="checkbox" name="Group-member-6" id="Group-member-6" value="6">
+            <label>7</label>
+            <input class="checkbox" type="checkbox" name="Group-member-7" id="Group-member-7" value="7">
+                <label>8</label>
+                <input class="checkbox" type="checkbox" name="Group-member-8" id="Group-member-8" value="8">
+            <br>
+            </div>
+
+            <br>
+            <label for="Group-album">First Group Albums Date:</label>
+            <input type="number" name="Group-album" id="Group-album" placeholder="Dates..." min ="1940" max="2025">
+            <br>
+    <br>
+
+            <label for="Group-location">Group concerts location:</label>
+                    <input type="text" name="Group-location" placeholder="Search for a location..." class="searchinginput">
+            <br>
+            <br>
+
+            <button type="submit" class="searchbutton">Search</button>
+        </div>
+    </form>
+<br>
+
+        <br><br>
+        {{if .Message}}
+            <div class="message">{{.Message}}</div>
+        {{end}}
+
+        <br>
+        </div>
+    </div>
+    <div class="wrapper">
+        {{range .ArtistsData}}
+        <a href="/artist?id={{.ID}}">
+            <div class="wrapperchild">
+                <img src="{{.Image}}" alt="artist image">
+                <div class="Name"><strong>{{.Name}}</strong></div>
+            </div>
+        </a>
+        {{end}}
+    </div>
+</div>
+</body>
+<footer>
+    <p>Groupie Tracker made with ❤️ by Cenes Gauthier, Madjid Fayed, Camuset Laurine <br></p>
+</footer>
+</html>

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: rgb(46,71,86);
+    background: linear-gradient(180deg, rgba(46,71,86,1) 0%, rgba(22,34,42,1) 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.errorContainer {
+    background-color: #111;
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: #222222 0px 0px 20px;
+    text-align: center;
+}
+
+.errorContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.errorTitle {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.errorMessage {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.errorAction {
+    margin-top: 1rem;
+}
+
+.homeButton {
+    padding: 0.8rem 1.5rem;
+    background-color: #2E4756;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+    background-color: #3a5b6d;
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        padding: 1rem;
+    }
+
+    .errorContainer {
+        padding: 2rem;
+    }
+
+    .errorTitle {
+        font-size: 2rem;
+    }
+
+    .errorMessage {
+        font-size: 1rem;
+    }
+}

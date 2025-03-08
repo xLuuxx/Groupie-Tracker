@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadInput</title>
+    <link rel="stylesheet" href="/static/css/error.css">
+</head>
+<body>
+<div class="mainContainer">
+    <div class="errorContainer">
+        <div class="errorContent">
+            <h1 class="errorTitle">{{.Title}}</h1>
+            <p class="errorMessage">{{.Message}}</p>
+            <div class="errorAction">
+                <button class="homeButton" onclick="window.location.href='/homepage'">Go back to homepage</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
