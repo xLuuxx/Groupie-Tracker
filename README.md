@@ -94,12 +94,5 @@ The project was developed using the following technologies:
         └── index.gohtml
 ```
 
----
-
-## 🎬 Presentation
-
-You can find the pitch presentation of the project [here](https://pitch.com/v/groupie-tracker-da9iez)
-The link for the Trello board is [here](https://trello.com/invite/b/676020cebf77c8c955b0b074/ATTI248363e8c099e1ca9b241e69ca53283215214A2E/groupie-tracker)
-
 ## 🎬 Credit
 Made by. Oiha, Luu and Fayed. 
