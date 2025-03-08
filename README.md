@@ -7,12 +7,11 @@
 ## 📖 Table of contents
 
 1. [**📚 About the project**](#-about-the-project)
-2. [**🎥 Demo**](#-demo)
-3. [**🚀 How to run the project**](#-how-to-run-the-project)
-4. [**💻 Technologies**](#-technologies)
-5. [**📁 Project Structure**](#-project-structure)
-6. [**🎬 Presentation**](#-presentation)
-7. [**👥 Credits**](#-credits)
+2. [**🚀 How to run the project**](#-how-to-run-the-project)
+3. [**💻 Technologies**](#-technologies)
+4. [**📁 Project Structure**](#-project-structure)
+5. [**🎬 Presentation**](#-presentation)
+6. [**👥 Credits**](#-credits)
 
 ---
 
@@ -24,13 +23,7 @@ This project was developed during the Groupie-Tracker project. The goal was to c
 - 📅 Concert locations
 - 🔍 Search functionality
 
-The final project repository can be found [here](https://ytrack.learn.ynov.com/git/cgauthie/Groupie-Tracker)
-
----
-
-## 🎥 Demo
-
-![PlaceHolder](https://i.imgur.com/KKGEcst.gif)
+The final project repository can be found [here](https://github.com/xLuuxx/Groupie-Tracker.git)
 
 ---
 
@@ -40,7 +33,7 @@ To run the project, you will need to have Go installed on your computer. If you 
 
 1. Clone the repository:
 ```bash
-git clone https://ytrack.learn.ynov.com/git/cgauthie/Groupie-Tracker.git
+git clone https://github.com/xLuuxx/Groupie-Tracker.git
 cd Groupie-Tracker
 go run .
 ```
@@ -107,3 +100,6 @@ The project was developed using the following technologies:
 
 You can find the pitch presentation of the project [here](https://pitch.com/v/groupie-tracker-da9iez)
 The link for the Trello board is [here](https://trello.com/invite/b/676020cebf77c8c955b0b074/ATTI248363e8c099e1ca9b241e69ca53283215214A2E/groupie-tracker)
+
+## 🎬 Credit
+Made by. Oiha, Luu and Fayed. 
